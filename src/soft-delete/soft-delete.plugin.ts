@@ -1,3 +1,4 @@
+// source: https://github.com/LouisJULIEN/kysely-plugins/blob/main/src/soft-delete/soft-delete.plugin.ts
 import {
   AliasNode,
   BinaryOperationNode,
@@ -43,9 +44,9 @@ class SoftDeleteQueryTransformer extends OperationNodeTransformer {
   private ignoredTables: string[];
 
   constructor({
-    deletedAtColumnName,
-    ignoredTables,
-  }: {
+                deletedAtColumnName,
+                ignoredTables,
+              }: {
     deletedAtColumnName?: string;
     ignoredTables?: string[];
   }) {

@@ -1,3 +1,4 @@
+// source: https://github.com/LouisJULIEN/kysely-plugins/blob/main/src/auto-updated-at/auto-updated-at.plugin.ts
 import {
   ColumnNode,
   ColumnUpdateNode,

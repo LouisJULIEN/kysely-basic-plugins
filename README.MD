@@ -36,7 +36,6 @@ export const db = new Kysely<DB>({
     new SoftDelete({ ignoredTables, updatedAtColumnName: "my_updated_at" }),
     new AutoUpdatedAt({ ignoredTables, deletedAtColumnName: "terminated_at" }),
   ],
-  log: ["error"],
 });
 
 ```

@@ -8,7 +8,7 @@ Yes. Use the `updatedAtColumnName` argument when instantiating the plugin.
 
 ### Does this work with aliased tabled?
 
-As far as I know, you can not update an aliased table in Kysely (nor Postgres)
+As far as I know, you can not update an aliased table in Kysely (nor in Postgres)
 
 ## Soft delete
 
@@ -23,10 +23,10 @@ itself is not in `ignoredTables`, the referenced column (e.g. "deleted_at") will
 
 ### Does Kysely `.deleteFrom(...)` now does a soft delete?
 
-NO!! To soft delete, update the referenced column (e.g. "deleted_at") with an `.updateTable(...)`.
+**NO!!** To soft delete, update the referenced column (e.g. "deleted_at") with an `.updateTable(...)`.
 `.deleteFrom(...)` still does a hard delete.
 It's up to you to decide to forbid `.deleteFrom(...)` with your linter or not.
-Here's a basic example of how to do it in your `tsconfig.json` (you probably need to change the `object.name` value)
+Here's a basic example of how to do it in your `tsconfig.json` (you probably need to change the `object.name` value).
 
 ```json
 {
@@ -59,7 +59,7 @@ Yes
 
 ### Do those plugins work in combination with CamelCasePlugin?
 
-Yes
+Yes. Make sure the CamelCasePlugin comes before those plugins when instantiating `Kysely`.
 
 ### Is there any check that the column referenced (e.g. "updated_at" or "deleted_at") exists?
 

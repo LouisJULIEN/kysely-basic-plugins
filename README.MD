@@ -4,8 +4,8 @@ This repo contains the source code of two Kysely plugins:
 
 - [auto-updated-at](src/auto-updated-at): automatically updates a column (e.g. "updated_at) each time an update is made
   on a row
-- [soft-delete](src/soft-delete): select and updates can't be made on a row whose deletion column (e.g. "deleted_at") is
-  not NULL
+- [soft-delete](src/soft-delete): `.selectFrom(...)` and `updateTable(...)` can't be made on a row whose deletion column
+(e.g. "deleted_at") is not `NULL`
 
 ## Questions about the usage
 

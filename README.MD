@@ -4,10 +4,14 @@ This repo contains the source code of two Kysely plugins:
 
 - [auto-updated-at](src/auto-updated-at): automatically updates a column (e.g. "updated_at) each time an update is made
   on a row
-- [soft-delete](src/soft-delete): select and updates can't be made on a row whose deletion column (e.g. "deleted_at) is
+- [soft-delete](src/soft-delete): select and updates can't be made on a row whose deletion column (e.g. "deleted_at") is
   not NULL
 
-## Set up
+## Questions about the usage
+
+See [FAQ.MD](FAQ.MD)
+
+## Installation
 
 Copy the files whose names ends with ".plugin.ts" and paste it to you source code. Import it as for example:
 
@@ -37,10 +41,6 @@ export const db = new Kysely<DB>({
 
 ```
 
-## Auto Updated At
-
-## Soft delete
-
 ## Run the tests & build
 
 ### Set up
@@ -53,10 +53,6 @@ npm i
 npm run migrate:latest
 ```
 
-### Questions
-
-See [FAQ.MD](FAQ.MD)
-
 ### Run the tests
 
 ```bash
@@ -68,4 +64,10 @@ npm run test
 ```bash
 npm run build
 ```
+
+## Contributors
+
+[victormachado-ada-tech](https://github.com/victormachado-ada-tech) who published a soft delete plugin
+in [an issue](https://github.com/kysely-org/kysely/issues/803)
+
 

@@ -2,10 +2,10 @@
 
 This repo contains the source code of two Kysely plugins:
 
-- [auto-updated-at](src/auto-updated-at): automatically updates a column (e.g. "updated_at) each time an update is made
-  on a row
-- [soft-delete](src/soft-delete): `.selectFrom(...)` and `updateTable(...)` can't be made on a row whose deletion column
-(e.g. "deleted_at") is not `NULL`
+- [auto-updated-at](src/auto-updated-at/auto-updated-at.plugin.ts): automatically updates a column (e.g. "updated_at)
+  each time an update is made on a row
+- [soft-delete](src/soft-delete/soft-delete.plugin.ts): `.selectFrom(...)` and `updateTable(...)` ignore rows
+  whose deletion column (e.g. "deleted_at") is not `NULL`
 
 ## Questions about the usage
 
@@ -13,7 +13,7 @@ See [FAQ.MD](FAQ.MD)
 
 ## Installation
 
-Copy the files whose names ends with ".plugin.ts" and paste it to you source code. Import it as for example:
+Copy the files whose names ends with `.plugin.ts` and paste it into you source code. You can then import it as follows:
 
 ```ts
 import { CamelCasePlugin, Kysely, PostgresDialect } from "kysely";
@@ -33,8 +33,8 @@ export const db = new Kysely<DB>({
   }),
   plugins: [
     new CamelCasePlugin(),
-    new SoftDelete({ ignoredTables }),
-    new AutoUpdatedAt({ ignoredTables }),
+    new SoftDelete({ ignoredTables, updatedAtColumnName: "my_updated_at" }),
+    new AutoUpdatedAt({ ignoredTables, deletedAtColumnName: "terminated_at" }),
   ],
   log: ["error"],
 });
@@ -45,10 +45,10 @@ export const db = new Kysely<DB>({
 
 ### Set up
 
-You need node, npm and Postgres installed
+You need Node.js, npm and Postgres installed
 
 ```bash
-psql -c "CREATE DATABASE kysely_plugin"
+psql -c "CREATE DATABASE kysely_plugin;"
 npm i
 npm run migrate:latest
 ```
@@ -67,7 +67,5 @@ npm run build
 
 ## Contributors
 
-[victormachado-ada-tech](https://github.com/victormachado-ada-tech) who published a soft delete plugin
-in [an issue](https://github.com/kysely-org/kysely/issues/803)
-
-
+[victormachado-ada-tech](https://github.com/victormachado-ada-tech) who published a good first version of a soft delete
+plugin in [an issue](https://github.com/kysely-org/kysely/issues/803)

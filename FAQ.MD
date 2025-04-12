@@ -6,11 +6,20 @@
 
 Yes. Use the `updatedAtColumnName` argument when instantiating the plugin.
 
+### Does this work with aliased tabled?
+
+As far as I know, you can not update an aliased table in Kysely (nor Postgres)
+
 ## Soft delete
 
 ### Can I customize the column referenced?
 
 Yes. Use the `deletedAtColumnName` argument when instantiating the plugin.
+
+### Does this work with aliased tabled?
+
+Yes, as long as if you don't alias a table that is part of `ignoredTables`. In that specific case, if the alias
+itself is not in `ignoredTables`, the referenced column (e.g. "deleted_at") will be checked.
 
 ### Does Kysely `.deleteFrom(...)` now does a soft delete?
 

@@ -1,0 +1,30 @@
+{
+  "name": "kysely-plugins",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "prepare": "tsc --emitDeclarationOnly",
+    "build": "npm run build:auto-updated-at && npm run build:soft-delete",
+    "build:auto-updated-at": "tsup --config src/auto-updated-at/tsup.config.ts",
+    "build:soft-delete": "tsup --config src/soft-delete/tsup.config.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest",
+    "migrate:make": "kysely migrate make",
+    "migrate:latest": "kysely migrate latest",
+    "migrate:generate-orm": "kysely-codegen generate --out-file ./src/utils/db/db.d.ts"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.11.12",
+    "dotenv": "^16.5.0",
+    "kysely": "^0.27.6",
+    "kysely-codegen": "^0.18.3",
+    "kysely-ctl": "^0.12.1",
+    "pg": "^8.14.1",
+    "prettier": "^3.5.3",
+    "trpc-ui": "^1.0.15",
+    "tsup": "^8.4.0",
+    "tsx": "^4.19.3",
+    "typescript": "5.8.2",
+    "vitest": "^3.1.1"
+  }
+}

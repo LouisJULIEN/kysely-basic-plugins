@@ -1,0 +1,30 @@
+{
+  "extends": "./src/utils/typescript-config/base.json",
+  "compilerOptions": {
+    "types": [
+      "vitest/globals"
+    ],
+    "target": "ESNext",
+    "outDir": "dist",
+    "rootDir": "src",
+    "baseUrl": ".",
+    "declaration": true,
+    "declarationMap": false,
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    "strict": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
+  },
+  "include": [
+    "src/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "rules": {
+  }
+}

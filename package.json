@@ -10,6 +10,7 @@
     "build:soft-delete": "tsup --config src/soft-delete/tsup.config.ts",
     "typecheck": "tsc --noEmit",
     "test": "vitest",
+    "test:ci": "vitest run",
     "migrate:make": "kysely migrate make",
     "migrate:latest": "kysely migrate latest",
     "migrate:generate-orm": "kysely-codegen generate --out-file ./src/utils/db/db.d.ts"
@@ -17,6 +18,7 @@
   "devDependencies": {
     "@types/pg": "^8.11.12",
     "dotenv": "^16.5.0",
+    "husky": "^9.1.7",
     "kysely": "^0.27.6",
     "kysely-codegen": "^0.18.3",
     "kysely-ctl": "^0.12.1",

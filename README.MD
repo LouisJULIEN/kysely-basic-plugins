@@ -1,6 +1,6 @@
 # Kysely Plugins
-
-This repo contains the source code of two [Kysely](https://kysely.dev/) plugins:
+<img src="assets/logo.png" height="240px" width="240px" /><br/>
+This repo contains the source code of two basic [Kysely](https://kysely.dev/) plugins:
 
 - [auto-updated-at](src/auto-updated-at/auto-updated-at.plugin.ts): automatically updates a column (e.g. "updated_at)
   each time an update is made on a row

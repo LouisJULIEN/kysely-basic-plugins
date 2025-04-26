@@ -4,7 +4,6 @@
   "private": false,
   "license": "MIT",
   "scripts": {
-    "prepare": "tsc --emitDeclarationOnly",
     "build": "npm run build:auto-updated-at && npm run build:soft-delete",
     "build:auto-updated-at": "tsup --config src/auto-updated-at/tsup.config.ts",
     "build:soft-delete": "tsup --config src/soft-delete/tsup.config.ts",
@@ -24,7 +23,6 @@
     "kysely-ctl": "^0.12.1",
     "pg": "^8.14.1",
     "prettier": "^3.5.3",
-    "trpc-ui": "^1.0.15",
     "tsup": "^8.4.0",
     "tsx": "^4.19.3",
     "typescript": "5.8.2",

@@ -1,5 +1,4 @@
 {
-  "extends": "./src/utils/typescript-config/base.json",
   "compilerOptions": {
     "types": [
       "vitest/globals"
@@ -11,6 +10,9 @@
     "declaration": true,
     "declarationMap": false,
     "paths": {
+      "*": [
+        "node_modules/*"
+      ],
       "@/*": [
         "./src/*"
       ]
@@ -20,10 +22,10 @@
     "jsxImportSource": "react"
   },
   "include": [
-    "src/*"
+    "src/**/*"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
   ],
   "rules": {
   }

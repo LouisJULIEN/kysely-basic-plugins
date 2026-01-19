@@ -20,7 +20,7 @@
     "husky": "^9.1.7",
     "kysely": "^0.27.6",
     "kysely-codegen": "^0.18.3",
-    "kysely-ctl": "^0.12.1",
+    "kysely-ctl": "^0.20.0",
     "pg": "^8.14.1",
     "prettier": "^3.5.3",
     "tsup": "^8.4.0",

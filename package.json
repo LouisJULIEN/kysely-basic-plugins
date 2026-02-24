@@ -1,6 +1,6 @@
 {
   "name": "kysely-plugins",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": false,
   "license": "MIT",
   "scripts": {
@@ -15,17 +15,17 @@
     "migrate:generate-orm": "kysely-codegen generate --out-file ./src/utils/db/db.d.ts"
   },
   "devDependencies": {
-    "@types/pg": "^8.11.12",
-    "dotenv": "^16.5.0",
+    "@types/pg": "^8.16.0",
+    "dotenv": "^17.3.1",
     "husky": "^9.1.7",
-    "kysely": "^0.27.6",
-    "kysely-codegen": "^0.18.3",
-    "kysely-ctl": "^0.12.1",
-    "pg": "^8.14.1",
-    "prettier": "^3.5.3",
-    "tsup": "^8.4.0",
-    "tsx": "^4.19.3",
-    "typescript": "5.8.2",
-    "vitest": "^3.1.1"
+    "kysely": "^0.28.11",
+    "kysely-codegen": "^0.20.0",
+    "kysely-ctl": "^0.20.0",
+    "pg": "^8.18.0",
+    "prettier": "^3.8.1",
+    "tsup": "^8.5.1",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
   }
 }

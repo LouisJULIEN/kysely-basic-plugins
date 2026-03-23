@@ -8,4 +8,5 @@ export default defineConfig({
   format: ["cjs", "esm"],
   dts: true,
   outDir: "dist/soft-delete",
+  deps: { onlyBundle: false },
 });

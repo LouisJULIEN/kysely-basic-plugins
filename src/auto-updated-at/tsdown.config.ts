@@ -8,4 +8,5 @@ export default defineConfig({
   format: ["cjs", "esm"],
   dts: true,
   outDir: "dist/auto-updated-at",
+  deps: { onlyBundle: false },
 });

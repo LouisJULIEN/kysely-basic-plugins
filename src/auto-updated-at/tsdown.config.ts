@@ -1,4 +1,4 @@
-import { defineConfig } from "tsup";
+import { defineConfig } from "tsdown";
 
 export default defineConfig({
   entry: ["src/auto-updated-at/auto-updated-at.plugin.ts"],

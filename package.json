@@ -1,12 +1,12 @@
 {
   "name": "kysely-plugins",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": false,
   "license": "MIT",
   "scripts": {
     "build": "npm run build:auto-updated-at && npm run build:soft-delete",
-    "build:auto-updated-at": "tsup --config src/auto-updated-at/tsup.config.ts",
-    "build:soft-delete": "tsup --config src/soft-delete/tsup.config.ts",
+    "build:auto-updated-at": "tsdown --config src/auto-updated-at/tsdown.config.ts",
+    "build:soft-delete": "tsdown --config src/soft-delete/tsdown.config.ts",
     "typecheck": "tsc --noEmit",
     "test": "vitest",
     "test:ci": "vitest run",
@@ -23,7 +23,7 @@
     "kysely-ctl": "^0.20.0",
     "pg": "^8.18.0",
     "prettier": "^3.8.1",
-    "tsup": "^8.5.1",
+    "tsdown": "^0.21.4",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
     "vitest": "^4.0.18"
